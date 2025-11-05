@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import LeftArrow from "../assets/left-arrow.svg"
-import RightArrow from "../assets/right-arrow.svg"
 
 interface CalendarDay {
     date?: Date;
@@ -103,8 +101,7 @@ const nextMonth = () => {
     <main>
         <div class="calendar-body">
             <div class="calendar-header">
-                <button class="custom-button prev" @click="prevMonth()"
-                    :style="{ backgroundImage: `url(${LeftArrow})` }"></button>
+                <button class="custom-button prev" @click="prevMonth()"></button>
                 <span>{{ monthNames[currentMonth] }} {{ currentYear }}</span>
                 <button class="custom-button next" @click="nextMonth()"></button>
             </div>
